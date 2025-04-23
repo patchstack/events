@@ -1,0 +1,108 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Profile from '../components/Profile.astro';
+import SocialLinks from '../components/SocialLinks.astro';
+import Footer from '../components/Footer.astro';
+import { Image } from 'astro:assets';
+import LinkCard from '../components/LinkCard.astro';
+
+---
+
+<Layout 
+    title="Meet the Patchstack team at WordCamp Vienna 2025" 
+    description="Get in touch with Sander and Maciek, and learn more about our mVDP program, bug bounty, and WordPress security."
+    image="/wcvienna-wide.png"
+>
+	<main class="min-h-screen py-12 sm:py-16 px-4 flex flex-col items-center">
+        <div class="relative p-0.5 mb-10">
+            <div class="relative z-10 bg-white dark:bg-primary-950 ring-1 ring-primary-100/90 dark:ring-primary-800/50">
+                <Image
+                    src="/patchstack_logomark.png"
+                    alt=""
+                    width={140}
+                    height={140}
+                    quality={90}
+                    loading="eager"
+                    class="w-24 h-24 sm:w-28 sm:h-28 object-cover transition-all duration-300"
+                />
+                <!-- Subtle overlay for depth -->
+                <div class="absolute inset-0 rounded-full bg-gradient-to-b from-transparent to-black/10 dark:to-black/30 opacity-40"></div>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+            <div class="flex-1">
+            <Profile 
+                name="Sander Jürgens"
+                title="Support Engineer" 
+                bio="The hottest guy in the world because he’s the god of all things sauna. He gets all too excited and hot when specifically listening to music on-board airplanes. He’s fun, he’s easy and he can put two notes in one hot whistle!"
+                image="/sander.png"
+
+            />
+            <h2 class="text-center">Get in touch with Sander</h2>
+            <SocialLinks
+                links={[
+                { name: 'Linkedin', href: 'https://www.linkedin.com/in/sander-j%C3%BCrgens-831114141/', icon: 'simple-icons:linkedin' },
+                { name: 'Instagram', href: 'https://www.instagram.com/sanderjyrgens', icon: 'simple-icons:instagram' },
+                { name: 'Twitter', href: 'https://x.com/p6rand', icon: 'simple-icons:twitter' },
+                { name: 'Facebook', href: 'https://www.facebook.com/profile.php?id=100076533620324', icon: 'simple-icons:facebook' },
+
+                ]}
+            />
+            </div>
+
+            <div class="flex-1">
+            <Profile
+                name="Maciek Palmowski"
+                title="Security Community Manager" 
+                bio="Behind that Polish smile you’ll find the one-in-a million developer turned self-taught extrovert. Loves secure code, chic coffee and even has a devoted show for geeks alike. Maciek does his research to near-horrid depths and is a walking-biking knowledge-base of hot tips and cold sarcastic humor."
+                image="/maciek.jpg"
+            />
+            <h2 class="text-center">Get in touch with Maciek</h2>
+            <SocialLinks links={[
+                { name: 'Twitter', href: 'https://twitter.com/palmiak_fp', icon: 'simple-icons:twitter' },
+                { name: 'LinkedIn', href: 'https://www.linkedin.com/in/maciekpalmowski/', icon: 'simple-icons:linkedin' },
+                { name: 'Bluesky', href: 'https://bsky.app/profile/maciekpalmowski.dev', icon: 'simple-icons:bluesky' },
+            ]} />
+            </div>
+
+        </div>
+        
+        <div class="flex flex-col gap-3 sm:gap-4 w-full max-w-xl mx-auto">
+            <LinkCard
+                title="Patchstack website"
+                description="Learn more about Patchstack"
+                href="https://patchstack.com"
+                target="_blank"
+            />
+
+            <LinkCard
+                title="mVDP"
+                description="Learn more about our mVDP program and why you should join it"
+                href="https://patchstack.com/for-plugins/"
+                target="_blank"
+            />
+
+            <LinkCard
+                title="WordPress Security"
+                description="Discover how Patchstack finds and blocks vulnerabilities in your WordPress core, theme and plugins"
+                href="https://patchstack.com/wordpress-security/"
+                target="_blank"
+            />
+
+            <LinkCard
+                title="Bug Bounty"
+                description="Are you a security researcher? Join our bug bounty program and earn money for your findings"
+                href="https://patchstack.com/bug-bounty/"
+                target="_blank"
+            />
+
+            <LinkCard
+                title="Is it worth converting your WordPress to headless?"
+                description="A blog post by Maciek about headless architecture."
+                href="https://maciekpalmowski.dev/blog/is-it-worth-converting-your-wordpress-to-headless/"
+                target="_blank"
+            />
+        </div>
+		<Footer />
+	</main>
+</Layout>
