@@ -5,7 +5,7 @@
 // These values are used throughout the site to provide consistent branding and descriptions.
 import authorImage from './assets/profile.avif';
 
-export const SITE_URL = 'https://linkk.astrothem.es';
+export const SITE_URL = 'https://patchstackevents.netlify.app';
 export const SITE_TITLE = 'Linkk | Astro Link in Bio Template';
 export const SITE_DESCRIPTION =
   'Linkk is a modern link in bio template built with Astro. Perfect for creators and developers looking for a minimal, customizable alternative to Linktree.';
