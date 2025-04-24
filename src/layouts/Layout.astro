@@ -12,7 +12,7 @@ const { title = SITE_TITLE, description = SITE_DESCRIPTION, image = '' } = Astro
 ---
 
 <!doctype html>
-<html lang="en" class="bg-primary-50 text-primary-900 dark:bg-primary-950 dark:text-primary-200 transition-colors duration-300">
+<html lang="en" class="bg-primary-50 text-primary-900 dark:bg-primary-950 dark:text-primary-200 transition-colors duration-300 dark">
 	<head>
 		<BaseHead title={title} description={description} image={image} />
 	</head>
@@ -21,10 +21,3 @@ const { title = SITE_TITLE, description = SITE_DESCRIPTION, image = '' } = Astro
 		<slot />
 	</body>
 </html>
-
-<script is:inline>
-	document.documentElement.classList.toggle(
-		'dark',
-		localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
-	)
-</script>
