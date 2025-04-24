@@ -21,7 +21,7 @@ const { title, description, href, target } = Astro.props;
 	<div class="relative z-10 flex items-center justify-between gap-4">
 		<div class="flex-1">
 			<h2
-				class="mb-2 font-primary text-base font-medium text-primary-950 transition-colors duration-300 dark:text-primary-100 sm:text-lg border-b border-accent-200/20 dark:border-accent-700/10 inline-block pb-0.5"
+				class="mb-2 font-primary text-base font-medium text-primary-950 transition-colors duration-300 dark:text-primary-100 sm:text-lg border-b border-accent-200/20 dark:border-accent inline-block pb-0.5"
 				set:html={title}
 			/>
 			<p
@@ -33,7 +33,7 @@ const { title, description, href, target } = Astro.props;
 			<div class="flex h-8 w-8 items-center justify-center overflow-hidden rounded-md bg-primary-50 transition-all duration-300 dark:bg-primary-800/50 group-hover:bg-accent-100/50 dark:group-hover:bg-accent-900/20 sm:h-9 sm:w-9">
 				<Icon
 					name="lucide:arrow-right"
-					class="size-3.5 text-primary-500 transition-colors duration-300 group-hover:text-accent-600 dark:text-primary-400 dark:group-hover:text-accent-400 sm:size-4"
+					class="size-3.5 text-accent transition-colors duration-300 group-hover:text-accent-600 dark:text-accent dark:group-hover:text-accent-400 sm:size-4"
 				/>
 			</div>
 		</div>

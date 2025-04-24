@@ -19,6 +19,7 @@
 	--color-primary-800: oklch(0.175 0.025 265);     /* off-black */
 	--color-primary-900: oklch(0.12 0.015 265);      /* darker off-black */
 	--color-primary-950: oklch(0.09 0.01 265);       /* deepest off-black */
+	--color-accent: #abe114;
 
   --font-primary: "Faktum", sans-serif;
   --font-secondary: "Faktum", sans-serif;
